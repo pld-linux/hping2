@@ -5,9 +5,9 @@ Version:	2.0.0
 Release:	2
 License:	GPL/BSD
 Group:		Networking/Utilities
-Source0:	http://www.hping.org/hping2.0.0-rc1.tar.gz
+Source0:	http://www.hping.org/%{name}.0.0-rc1.tar.gz
 Patch0:		%{name}-system-libpcap.patch
-URL:		http://www.hping.org/	
+URL:		http://www.hping.org/
 BuildRequires:	libpcap-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
