@@ -1,0 +1,37 @@
+diff -ur hping2-beta54.orig/Makefile.in hping2-beta54/Makefile.in
+--- hping2-beta54.orig/Makefile.in	Thu Jul  6 19:06:10 2000
++++ hping2-beta54/Makefile.in	Sat Nov 18 02:41:35 2000
+@@ -32,7 +32,7 @@
+ 
+ all: hping2
+ 
+-hping2: byteorder.h $(OBJ) $(PCAP)
++hping2: byteorder.h $(OBJ)
+ 	$(CC) -o hping2 $(CCOPT) $(DEBUG) $(COMPILE_TIME) $(OBJ) $(PCAP)
+ 	@echo
+ 	./hping2 -v
+diff -ur hping2-beta54.orig/configure hping2-beta54/configure
+--- hping2-beta54.orig/configure	Thu Jul  6 19:06:10 2000
++++ hping2-beta54/configure	Sat Nov 18 02:40:42 2000
+@@ -54,8 +54,8 @@
+ 	PCAP_INCLUDE=""
+ else
+ 	HAVE_PROC=""
+-	PCAP="PCAP=libpcap/libpcap.a"
+-	PCAP_INCLUDE="-I./libpcap"
++	PCAP="PCAP=-lpcap"
++	PCAP_INCLUDE="-I/usr/include"
+ fi
+ 
+ for ARG in $*; do
+@@ -65,8 +65,8 @@
+ 			;;
+ 		*"--force-libpcap")
+ 			FORCE_LIBPCAP="-DFORCE_LIBPCAP"
+-			PCAP="PCAP=libpcap/libpcap.a"
+-			PCAP_INCLUDE="-I./libpcap"
++			PCAP="PCAP=-lpcap"
++			PCAP_INCLUDE="-I/usr/include"
+ 			;;
+ 		*"--dont-use-proc")
+ 			HAVE_PROC=""
