@@ -32,7 +32,9 @@ obs³ugiwane protoko³y.
 MANPATH="%{_mandir}" \
 ./configure --force-libpcap
 
-%{__make} CCOPT="%{rpmcflags}"
+%{__make} \
+	CC="%{__cc}" \
+	CCOPT="%{rpmcflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
