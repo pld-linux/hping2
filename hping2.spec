@@ -2,11 +2,10 @@ Summary:	A software to do TCP/IP stack auditing and much more
 Summary(pl):	Oprogramowanie do audytu stosu TCP/IP
 Name:		hping2
 Version:	2.0.0
-Release:	2
+Release:	3
 License:	GPL/BSD
 Group:		Networking/Utilities
-Source0:	http://www.hping.org/%{name}.0.0-rc1.tar.gz
-Patch0:		%{name}-system-libpcap.patch
+Source0:	http://www.hping.org/%{name}.0.0-rc2.tar.gz
 URL:		http://www.hping.org/
 BuildRequires:	libpcap-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -25,8 +24,7 @@ i rozmiary pakietów i mo¿e byæ u¿ywany do przesy³ania plików przez
 obs³ugiwane protoko³y.
 
 %prep
-%setup -q -n hping2
-#%patch -p1
+%setup -q -n hping2-rc2
 
 %build
 MANPATH="%{_mandir}" \
@@ -46,13 +44,12 @@ install docs/hping2.8  $RPM_BUILD_ROOT%{_mandir}/man8
 ln -sf hping2 $RPM_BUILD_ROOT%{_sbindir}/hping
 
 rm -fR docs/CVS
-gzip -9nf COPYING *BUGS README TODO docs/[A-Z]*
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc {COPYING,*BUGS,README,TODO}.gz docs/[A-Z]*
+%doc COPYING *BUGS README TODO docs/[A-Z]*
 %attr(755,root,root) %{_sbindir}/*
 %{_mandir}/man8/*
