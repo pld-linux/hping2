@@ -1,0 +1,11 @@
+diff -Nur hping2-rc2.org/libpcap_stuff.c hping2-rc2/libpcap_stuff.c
+--- hping2-rc2.org/libpcap_stuff.c	2001-08-23 18:49:39.000000000 +0000
++++ hping2-rc2/libpcap_stuff.c	2004-01-29 18:02:26.000000000 +0000
+@@ -16,7 +16,6 @@
+ #include <stdlib.h>
+ #include <sys/ioctl.h>
+ #include <pcap.h>
+-#include <net/bpf.h>
+ 
+ #include "globals.h"
+ 
