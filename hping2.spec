@@ -3,14 +3,15 @@ Summary(pl):	Oprogramowanie do audytu stosu TCP/IP
 Name:		hping2
 %define		_rc	rc2
 Version:	2.0.0
-Release:	3
+Release:	4
 License:	GPL/BSD
 Group:		Networking/Utilities
 #Source0Download:	http://www.hping.org/download.html
 Source0:	http://www.hping.org/hping%{version}-%{_rc}.tar.gz
 # Source0-md5:	f9ab1f84ec89f2a1c428988231d554b0
+Patch0:		%{name}-pcap.patch
 URL:		http://www.hping.org/
-BuildRequires:	libpcap-devel
+BuildRequires:	libpcap-devel >= 2:0.8.1
 Provides:	hping
 Obsoletes:	hping
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -30,6 +31,7 @@ obs³ugiwane protoko³y.
 
 %prep
 %setup -q -n %{name}-%{_rc}
+%patch0 -p1
 
 %build
 MANPATH="%{_mandir}" \
