@@ -5,10 +5,6 @@ Version:	2.0.0
 Release:	2
 License:	GPL/BSD
 Group:		Networking/Utilities
-Group(de):	Netzwerkwesen/Werkzeuge
-Group(es):	Red/Utilitarios
-Group(pl):	Sieciowe/Narzêdzia
-Group(pt_BR):	Rede/Utilitários
 Source0:	http://www.hping.org/hping2.0.0-rc1.tar.gz
 Patch0:		%{name}-system-libpcap.patch
 URL:		http://www.hping.org/	
