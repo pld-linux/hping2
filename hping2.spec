@@ -35,11 +35,20 @@ obs³ugiwane protoko³y.
 
 %build
 MANPATH="%{_mandir}" \
+
+%ifarch ppc sparc ppc64 sparc64 sparcv9
+%define byteorder	-DBYTE_ORDER_BIG_ENDIAN
+%else
+%define byteorder	-DBYTE_ORDER_LITTLE_ENDIAN
+%endif
+
 ./configure --force-libpcap
+:>bytesex.h
 
 %{__make} \
 	CC="%{__cc}" \
-	CCOPT="%{rpmcflags}"
+	CCOPT="%{rpmcflags} %{byteorder}" \
+	DEBUG=""
 
 %install
 rm -rf $RPM_BUILD_ROOT
