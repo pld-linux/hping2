@@ -8,6 +8,7 @@ License:	GPL/BSD
 Group:		Networking/Utilities
 #Source0Download:	http://www.hping.org/download.html
 Source0:	http://www.hping.org/hping%{version}-%{_rc}.tar.gz
+# Source0-md5:	f9ab1f84ec89f2a1c428988231d554b0
 URL:		http://www.hping.org/
 BuildRequires:	libpcap-devel
 Provides:	hping
