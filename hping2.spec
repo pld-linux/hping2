@@ -1,14 +1,14 @@
 Summary:	A software to do TCP/IP stack auditing and much more
 Summary(pl):	Oprogramowanie do audytu stosu TCP/IP
 Name:		hping2
-%define		_rc	rc2
+%define		_rc	rc3
 Version:	2.0.0
-Release:	4
+Release:	5
 License:	GPL/BSD
 Group:		Networking/Utilities
 #Source0Download:	http://www.hping.org/download.html
 Source0:	http://www.hping.org/hping%{version}-%{_rc}.tar.gz
-# Source0-md5:	f9ab1f84ec89f2a1c428988231d554b0
+# Source0-md5:	029bf240f2e0545b664b2f8b9118d9e8
 Patch0:		%{name}-pcap.patch
 URL:		http://www.hping.org/
 BuildRequires:	libpcap-devel >= 2:0.8.1
