@@ -7,9 +7,9 @@ License:	GPL/BSD
 Group:		Networking/Utilities
 Group(de):	Netzwerkwesen/Werkzeuge
 Group(pl):	Sieciowe/Narzêdzia
-URL:		http://www.hping.org/	
 Source0:	http://www.hping.org/hping2.0.0-rc1.tar.gz
 Patch0:		%{name}-system-libpcap.patch
+URL:		http://www.hping.org/	
 BuildRequires:	libpcap-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -18,6 +18,13 @@ hping2 is a network tool able to send custom ICMP/UDP/TCP packets and
 to display target replies like ping do with ICMP replies. hping2
 handle fragmentation, arbitrary packet body and size and can be used
 in order to transfer files under supported protocols.
+
+%description -l pl
+hping2 to narzêdzie sieciowe do wysy³ania w³asnych pakietów
+ICMP/UDP/TCP i wy¶wietlania odpowiedzi, podobnie jak robi to ping z
+odpowiedziami ICMP. hping2 obs³uguje fragmentacjê, dowolne zawarto¶ci
+i rozmiary pakietów i mo¿e byæ u¿ywany do przesy³ania plików przez
+obs³ugiwane protoko³y.
 
 %prep
 %setup -q -n hping2
