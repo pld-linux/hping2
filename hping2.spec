@@ -1,9 +1,11 @@
 Summary:	A software to do TCP/IP stack auditing and much more
+Summary(pl):	Oprogramowanie do audytu stosu TCP/IP
 Name:		hping2
 Version:	beta54
 Release:	1
 License:	GPL/BSD
 Group:		Networking/Utilities
+Group(de):	Netzwerkwesen/Werkzeuge
 Group(pl):	Sieciowe/Narzêdzia
 URL:		http://www.kyuzz.org/antirez/hping2.html
 Source0:	%{name}-%{version}.tar.bz2
@@ -12,11 +14,10 @@ BuildRequires:	libpcap-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-hping2 is a network tool able to send custom ICMP/UDP/TCP
-packets and to display target replies like ping do with
-ICMP replies. hping2 handle fragmentation, arbitrary packet
-body and size and can be used in order to transfer files
-under supported protocols.
+hping2 is a network tool able to send custom ICMP/UDP/TCP packets and
+to display target replies like ping do with ICMP replies. hping2
+handle fragmentation, arbitrary packet body and size and can be used
+in order to transfer files under supported protocols.
 
 %prep
 %setup -q
@@ -26,7 +27,7 @@ under supported protocols.
 MANPATH="%{_mandir}" \
 ./configure --force-libpcap
 
-%{__make} CCOPT="$RPM_OPT_FLAGS"
+%{__make} CCOPT="%{rpmcflags}"
 
 %install
 rm -rf $RPM_BUILD_ROOT
