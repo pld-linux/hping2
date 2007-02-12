@@ -1,5 +1,5 @@
 Summary:	A software to do TCP/IP stack auditing and much more
-Summary(pl):	Oprogramowanie do audytu stosu TCP/IP
+Summary(pl.UTF-8):   Oprogramowanie do audytu stosu TCP/IP
 Name:		hping2
 %define		_rc	rc3
 Version:	2.0.0
@@ -22,12 +22,12 @@ to display target replies like ping do with ICMP replies. hping
 handle fragmentation, arbitrary packet body and size and can be used
 in order to transfer files under supported protocols.
 
-%description -l pl
-hping to narzÍdzie sieciowe do wysy≥ania w≥asnych pakietÛw
-ICMP/UDP/TCP i wy∂wietlania odpowiedzi, podobnie jak robi to ping z
-odpowiedziami ICMP. hping obs≥uguje fragmentacjÍ, dowolne zawarto∂ci
-i rozmiary pakietÛw i moøe byÊ uøywany do przesy≥ania plikÛw przez
-obs≥ugiwane protoko≥y.
+%description -l pl.UTF-8
+hping to narzƒôdzie sieciowe do wysy≈Çania w≈Çasnych pakiet√≥w
+ICMP/UDP/TCP i wy≈õwietlania odpowiedzi, podobnie jak robi to ping z
+odpowiedziami ICMP. hping obs≈Çuguje fragmentacjƒô, dowolne zawarto≈õci
+i rozmiary pakiet√≥w i mo≈ºe byƒá u≈ºywany do przesy≈Çania plik√≥w przez
+obs≈Çugiwane protoko≈Çy.
 
 %prep
 %setup -q -n %{name}-%{_rc}
