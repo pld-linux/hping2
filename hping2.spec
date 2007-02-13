@@ -1,5 +1,5 @@
 Summary:	A software to do TCP/IP stack auditing and much more
-Summary(pl.UTF-8):   Oprogramowanie do audytu stosu TCP/IP
+Summary(pl.UTF-8):	Oprogramowanie do audytu stosu TCP/IP
 Name:		hping2
 %define		_rc	rc3
 Version:	2.0.0
