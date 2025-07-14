@@ -31,7 +31,7 @@ obsługiwane protokoły.
 
 %prep
 %setup -q -n %{name}-%{_rc}
-%patch0 -p1
+%patch -P0 -p1
 
 %build
 MANPATH="%{_mandir}" \
