@@ -3,7 +3,7 @@ Summary(pl.UTF-8):	Oprogramowanie do audytu stosu TCP/IP
 Name:		hping2
 %define		_rc	rc3
 Version:	2.0.0
-Release:	8
+Release:	9
 License:	GPL/BSD
 Group:		Networking/Utilities
 #Source0Download:	http://www.hping.org/download.html
@@ -47,7 +47,7 @@ MANPATH="%{_mandir}" \
 
 %{__make} \
 	CC="%{__cc}" \
-	CCOPT="%{rpmcflags} %{byteorder}" \
+	CCOPT="%{rpmcflags} %{byteorder} -fcommon" \
 	DEBUG=""
 
 %install
